@@ -1,4 +1,5 @@
 <?php
+$val = $_GET['value'];
 $servername = "172.16.100.134";
 $username = "test123";
 $password = "test123";
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO sensors (value) VALUES (100)";
+$sql = "INSERT INTO sensors (value) VALUES ($val)";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
