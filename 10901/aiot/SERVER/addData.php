@@ -2,7 +2,7 @@
 $servername = "172.16.100.134";
 $username = "test123";
 $password = "test123";
-$dbname = "aiot";
+$dbname = "aiotdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
