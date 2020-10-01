@@ -18,7 +18,7 @@
         $temp = rand (0, 100);
         $value = rand (0, 100);
         $status = rand(0,1);
-        $sql = "insert into $tableName (humi,temp,value,status) VALUES (".$humi.",".$temp.",".$value.",".$staus.")";
+        $sql = "insert into $tableName (humi,temp,value,status) VALUES (".$humi.",".$temp.",".$value.",".$status.")";
         $result=mysqli_query($con,$sql);
     }     
 
