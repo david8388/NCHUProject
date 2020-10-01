@@ -21,8 +21,7 @@
 
 
     //資料庫Sql query語法
-    $sql = "UPDATE $tableName SET status = ".rand(0,1)."
-        where id > 0";
+    $sql = "UPDATE $tableName SET status = 1";
 
     //執行query語法
     $result = mysqli_query($con,$sql);
