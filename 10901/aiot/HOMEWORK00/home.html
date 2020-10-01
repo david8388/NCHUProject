@@ -122,6 +122,27 @@
             ////////////////////////
 
         });
+
+        $(function() {
+            setInterval(() => {
+                var temp = Math.random() * 100;
+                var humi = Math.random() * 100;
+                var value = Math.floor(Math.random() * 100);
+                $.ajax({
+                    url: 'addData.php',//連接的URL	  
+                    data: `l=${value}&t=${temp}&h=${humi}`,//夾帶的參數
+                    dataType: 'html', //資料格式 
+                    success: function(data)	//傳送成功的function
+                    {
+                        console.log('Success to insert data');
+                    },
+                    error: function(err) {
+                        console.log(`Error:${err}`);
+                    }
+                })
+            }, 5000)
+        });
+
     </script>
 
 
