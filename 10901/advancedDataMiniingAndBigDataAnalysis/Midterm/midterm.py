@@ -29,6 +29,13 @@ for question in list(questions):
     answer = max(answerMapping, key=lambda k: answerMapping[k])
     answers.append(answer)
 
+
+def getJsonList():
+    return json.dumps(answers)
+
+
+print(getJsonList())
+
 print(np.array(answers) == np.array(
     ["B", "C", "B", "A", "C", "A", "A", "C", "B", "B", "A", "C", "C", "B", "A", "B", "A", "C", "B", "B", "C", "A", "C",
      "A", "A", "C", "B", "C", "A", "B", "C", "A", "C", "C", "A", "B", "A", "C", "B", "A", "B", "C", "A", "B", "A", "C",
